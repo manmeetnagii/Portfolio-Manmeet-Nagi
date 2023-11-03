@@ -61,6 +61,10 @@ ul{
     margin-top: 1rem;
     text-align:start;
 }
+
+.navbar-links--container{
+    display: none;
+}
 nav ul.show{
     display: block;
     width: 100%;
