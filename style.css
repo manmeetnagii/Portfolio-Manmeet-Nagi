@@ -22,13 +22,14 @@ p span{
 }
 
 .material-symbols-outlined{
-    margin-left: 11.7rem;
+    
 }
 
 .navbar{
     width: 95%;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     padding-top: 1rem;
     align-items: center;
     justify-content: space-between;
@@ -42,14 +43,27 @@ a{
 }
 
 ul{
+    background-color: rgb(35, 35, 109);
+    border-radius: 1rem;
     display: flex;
+    flex-direction: column;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 .navbar-links--container li{
-    display: none;
+    font-size: 1rem;
+    display: block;
     list-style: none;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align:start;
+}
+nav ul.show{
+    display: block;
+    width: 100%;
 }
 
 main{
