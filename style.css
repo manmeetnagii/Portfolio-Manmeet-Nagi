@@ -21,9 +21,7 @@ p span{
     color: rgb(0, 13, 255);
 }
 
-.material-symbols-outlined{
-    
-}
+
 
 .navbar{
     width: 95%;
@@ -35,14 +33,17 @@ p span{
     justify-content: space-between;
 }
 
-.navbar-links{
-    font-size: 0.5em;
-}
+
 a{
     text-decoration: none;
 }
 
-ul{
+
+.material-symbols-outlined{
+    cursor: pointer;
+}
+
+.navbar-links--container{
     background-color: rgb(35, 35, 109);
     border-radius: 1rem;
     display: flex;
@@ -51,32 +52,41 @@ ul{
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
+    display: none;
+    font-size: 1rem;
 }
 
-.navbar-links--container li{
-    font-size: 1rem;
-    display: block;
+
+
+
+.navbar-links{
+    
     list-style: none;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    text-align:start;
+    text-align:center;
 }
 
-.navbar-links--container{
-    display: none;
-}
 nav ul.show{
     display: block;
-    width: 100%;
+    width: 100%;  
 }
 
+ul li .navlinks:hover{
+    
+    text-decoration: underline;
+    color: rgb(147, 147, 240);
+    transform: scale(1.1);
+    transition: all ease 0.1s;
+}
 main{
     width: 95%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 4rem auto;
-
+    
+      
 }
 
 main h1{
@@ -87,7 +97,7 @@ main p{
     color: rgb(185, 185, 185);
     font-size: 0.9rem;
     margin-top: 0.4rem;
-
+    
 }
 
 .main-content--buttons{
@@ -552,8 +562,13 @@ textarea::placeholder{
 }
 
 @media screen and (min-width: 768px) {
-    .navbar-links--container li{
-        display: block;
+    .navbar-links--container{
+        background-color: transparent;
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         list-style: none;
     }
 
@@ -561,9 +576,14 @@ textarea::placeholder{
         display: none;
     }
 
+    body{
+        overflow-x: hidden;
+    }
+
     .navbar-links a{
         font-size: 1rem;
-        margin-right: 0.8rem;
+        display: flex;
+        align-items: center;    
     }
 
     nav p{
@@ -571,7 +591,11 @@ textarea::placeholder{
         
     }
     .navbar{
+        width: 95%;
+        margin: 0 auto;
         display: flex;
+        padding-top: 1rem;
+        align-items: center;
         justify-content: space-between;
     }
 
@@ -579,6 +603,7 @@ textarea::placeholder{
         color: blue;
         text-decoration: underline;
         transition: all ease 0.5s;
+        
      }
 
      main h1{
@@ -616,14 +641,14 @@ textarea::placeholder{
     
     .about--sub-heading{
         color: rgb(185, 185, 185);
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         line-height: 0.6rem;
     
     }
     
     .about--description{
         color: rgb(185, 185, 185);
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         text-align:left;
         margin-top: 0.4rem;
     }
@@ -669,7 +694,7 @@ textarea::placeholder{
 
     .projects--sub-heading{
         color: rgb(185, 185, 185);
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         line-height: 0.6rem;
     }
     
@@ -679,15 +704,14 @@ textarea::placeholder{
     
     .projects--description{
         color: rgb(185, 185, 185);
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-top: 0.4rem;
     }
 
     .projects-cards--container{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+        grid-gap: 5rem;
         
      
      }
@@ -696,7 +720,7 @@ textarea::placeholder{
         flex-direction: column;
         justify-content: center;
         border: 2px solid rgb(164, 164, 255);
-        width: 35rem;
+        width: 20rem;
         height: auto;
         border-radius: 1rem;
         
@@ -705,23 +729,23 @@ textarea::placeholder{
     }
     
     .projects-card img{
-        width: 25rem;
+        width: 19rem;
         border-radius: 0.8rem;
-        height: 25rem;
-        margin: 0.5rem auto;
+        height: 19rem;
+        margin: 0.3rem auto;
     }
     .projects-card h2{
         margin: 0 auto;
-        font-size: 2.5rem;
+        font-size: 1.3rem;
         
         
     }
     .projects-card p{
         width: 90%;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         color: rgb(185, 185, 185);
         text-align: justify;
-        margin-bottom: 10rem;
+        margin-bottom: 3rem;
     }
     
     .projects-langUSe{
@@ -737,7 +761,7 @@ textarea::placeholder{
     }
     
     .projects-langUSe a{
-        font-size: 20px;
+        font-size: 15px;
         border: 1px solid orange;
         border-radius: 0.5rem;
         padding: 0 0.5rem;
@@ -752,7 +776,7 @@ textarea::placeholder{
     }
     
     .projects-langUSe h8{
-        font-size: 20px;
+        font-size: 15px;
         
     
     }
@@ -794,7 +818,7 @@ textarea::placeholder{
         flex-direction: column;
         justify-content: center;
         border: 2px solid rgb(164, 164, 255);
-        width: 40rem;
+        width: 20rem;
         margin: 1rem 1rem;
         height: auto;
         border-radius: 0.5rem;
@@ -802,8 +826,8 @@ textarea::placeholder{
     
     .certificates-card img{
     
-        width: 38rem;
-        height: 28rem;
+        width: 19rem;
+        height: 15rem;
         margin: 0.5rem auto;
         border-radius: 1rem;
     }
@@ -816,11 +840,11 @@ textarea::placeholder{
     }
 
     .certifications-card--content{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     
     .certifications-card--content a{
-        font-size: 20px;
+        font-size: 15px;
         width: 100%;
         border: 1px solid orange;
         border-radius: 0.5rem;
@@ -832,7 +856,7 @@ textarea::placeholder{
     
     .certifications-card--content h3{
         margin-bottom: 1rem;
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
     
     .certificates-link:hover{
@@ -852,7 +876,7 @@ textarea::placeholder{
     
     .skills--sub-heading{
         color: rgb(185, 185, 185);
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         line-height: 0.6rem;
     }
     .skills--main-heading{
@@ -860,7 +884,7 @@ textarea::placeholder{
     }
     .contact--sub-heading{
         color: rgb(185, 185, 185);
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         line-height: 0.6rem;
     }
     .contact--main-heading{
@@ -869,7 +893,7 @@ textarea::placeholder{
     
     .skills-description{
         color: rgb(185, 185, 185);
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-top: 0.4rem;
     }
     
@@ -885,8 +909,8 @@ textarea::placeholder{
     }
     
     .logo{
-        width: 7rem;
-        height: 7rem;
+        width: 5rem;
+        height: 5rem;
         margin-top: 2rem;
         margin-right: 1rem;
     }
@@ -1049,7 +1073,7 @@ textarea::placeholder{
     .footer p{
         border-top: 1px solid rgb(185, 185, 185);
         font-size: 1rem;
-        margin-top: 2rem;
+        margin-top: 5rem;
         color: rgb(185, 185, 185);
         
     }
@@ -1064,6 +1088,8 @@ textarea::placeholder{
     .navbar-links--container li{
         display: block;
         list-style: none;
+        margin-top: 0;
+        margin-right: 0;
     }
 
     .navbar .material-symbols-outlined{
@@ -1071,8 +1097,9 @@ textarea::placeholder{
     }
 
     .navbar-links a{
-        font-size: 1.rem;
-        margin-right: 3rem;
+        font-size: 1rem;
+        margin-right: 0rem;
+        margin-top: 0;
     }
 
     nav p{
@@ -1090,8 +1117,12 @@ textarea::placeholder{
         transition: all ease 0.5s;
      }
 
+
+
      main{
         margin-top: 15rem;
+        margin-bottom: 15rem;
+        
      }
 
      main h1{
@@ -1128,7 +1159,8 @@ textarea::placeholder{
     } 
 
     .about{
-        margin-top: 20rem;
+     margin: 0 auto;
+     margin-bottom: 15rem;
     }
 
     .about-content h1{
@@ -1137,8 +1169,9 @@ textarea::placeholder{
     
     .about--sub-heading{
         color: rgb(185, 185, 185);
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 0.6rem;
+        margin-bottom: 5rem;
     
     }
     
@@ -1147,7 +1180,7 @@ textarea::placeholder{
         font-size: 1rem;
         width: 70%;
         text-align:left;
-        margin-top: 0.4rem;
+        margin-top: 5rem;
     }
 
     .cards{
@@ -1189,10 +1222,14 @@ textarea::placeholder{
         
     }
 
+ 
+
+
     .projects--sub-heading{
         color: rgb(185, 185, 185);
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 0.6rem;
+        margin-bottom: 5rem;
     }
     
     .projects--main-heading{
@@ -1211,7 +1248,7 @@ textarea::placeholder{
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        margin-top: 5rem;
+        margin-top: 3rem;
         
      
      }
@@ -1230,23 +1267,25 @@ textarea::placeholder{
     }
     
     .projects-card img{
-        width: 15rem;
+        width: 19rem;
         border-radius: 0.8rem;
-        height: 15rem;
+        height: 17rem;
         margin: 0.5rem auto;
     }
     .projects-card h2{
-        margin: 0.5rem auto;
+        margin: 0 auto;
+
         font-size: 1.4rem;
         
         
     }
     .projects-card p{
         width: 90%;
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         color: rgb(185, 185, 185);
         text-align: justify;
-        margin-bottom: 0rem;
+        margin-bottom: 5rem;
+        margin-top: 1rem;
     }
     
     .projects-langUSe{
@@ -1300,7 +1339,9 @@ textarea::placeholder{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin: 4rem auto;
+        margin: 0 auto;
+        margin-top: 15rem;
+       
     }
     
     .certifications h1{
@@ -1373,23 +1414,27 @@ textarea::placeholder{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        
         margin: 0 auto;
         margin-top: 15rem;
+        
 
     }
     
     .skills--sub-heading{
         color: rgb(185, 185, 185);
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 0.6rem;
+        margin-bottom: 5rem;
     }
     .skills--main-heading{
         font-size: 3rem;
     }
     .contact--sub-heading{
         color: rgb(185, 185, 185);
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 0.6rem;
+        margin-bottom: 1rem;
     }
     .contact--main-heading{
         font-size: 3rem;
@@ -1422,10 +1467,11 @@ textarea::placeholder{
     
     .contact{
     
-        margin-top: 15rem;
+       
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        margin-top: 20rem;
     }
     
     .inputs{
